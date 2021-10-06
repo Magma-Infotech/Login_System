@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.space{
+	height: 160px;
+}
 .full-page
 {
     height: 100%;
@@ -15,6 +18,9 @@
 }
 .navbar
 {
+	position: fixed;
+  top: 0;
+  width: 100%;
     display: flex;
     align-items: center;
     padding: 20px;
@@ -68,6 +74,64 @@ a
     color:black;
     font-size: 28px;
 }
+
+.toggle{
+	display: none;
+}
+
+@media screen and (max-width: 1035px){
+	.MenuItems{
+		margin-top: 50px;
+		position: absolute;
+		right: 0px;
+		height: 450px;
+		justify-content: space-around;
+		width: 50%;
+		top: 8vh;
+		background-color: lightblue;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-right: 0px;
+		transform: translateX(100%);
+		transition: transform 0.4s ease-in;
+		opacity: 0.85;
+		border: 1px solid deepskyblue;
+		
+		
+	}
+	.toggle{
+		display: block;
+		cursor: pointer;
+	}
+
+	.MenuItems li{
+		margin-left: 60px;
+		opacity: 0;
+	}
+
+	.nav-active{
+			transform: translateX(0%);
+	}
+
+	@keyframes navLinkFade {
+		from{
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to{
+			opacity: 0.95;
+			transform: translateX(0px);
+
+		}
+}
+
+}
+
+
+
+
+
 #login-form
 {
     display:flex ;
